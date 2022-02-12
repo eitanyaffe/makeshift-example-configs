@@ -17,7 +17,7 @@ GCP_LOCATION?=us-west1
 BUCKET_VER?=v1
 
 # specify project name
-PROJECT_NAME?=ms-sra-example-$(GCP_PROJECT_ID)
+PROJECT_NAME=ms-sra-example-$(GCP_PROJECT_ID)
 
 # specify unique input bucket
 INPUT_BUCKET=gs://ms-sra-example-$(GCP_PROJECT_ID)-input-$(BUCKET_VER)
@@ -59,7 +59,7 @@ $(call _class_instance,gmount,DE,gs://yaffe-deconseq standard DECONSEQ_BASE_DIR)
 # basic params
 ##########################################################################################
 
-PAR_MS_PROJECT_NAME?=$(PROJECT_NAME)
+PAR_MS_PROJECT_NAME=$(PROJECT_NAME)
 
 GCP_DSUB_ODIR_BUCKET=$(WORK_BUCKET)
 
