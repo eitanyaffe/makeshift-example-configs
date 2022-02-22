@@ -2,8 +2,6 @@
 # specify google account details (see more in cloud/gcp module)
 ###############################################################################################
 
-GCP_PROJECT_ID?=relman-yaffe
-
 # default dsub regions
 GCP_REGION?=us-west1
 
