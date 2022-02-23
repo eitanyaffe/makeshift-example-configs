@@ -2,20 +2,14 @@
 # specify basic parameters
 ##########################################################################################
 
-# specify project name
+# project name
 PROJECT_NAME=demo-$(GCP_PROJECT_ID)
 
-# specify unique input bucket
-# INPUT_BUCKET=gs://ms-$(PROJECT_NAME)-input
-
-# specify unique work bucket
+# output bucket
 OUTPUT_BUCKET=gs://ms-$(PROJECT_NAME)-output
 
-##########################################################################################
-##########################################################################################
-# NO NEED TO EDIT FROM THIS POINT
-##########################################################################################
-##########################################################################################
+# docker image
+GCP_IMAGE_NAME=mdocker-base
 
 ##########################################################################################
 # register buckets
