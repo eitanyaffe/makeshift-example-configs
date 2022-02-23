@@ -31,5 +31,3 @@ GCP_DSUB_ODIR_BUCKET=$(OUTPUT_BUCKET)
 
 # over parameter table
 DEMO_SUBJECT_PARAM_TABLE=$(_cd)/params.txt
-
-PAR_EMAIL=F
