@@ -15,9 +15,6 @@ GCP_GCR_IMAGE_PATH=eitanyaffe/mdocker-base:v1.00
 # register buckets
 ##########################################################################################
 
-# input fastq files placed here
-# $(call _class_instance,gmount,IN,$(INPUT_BUCKET) standard INPUT_DIR)
-
 # output files files placed here
 $(call _class_instance,gmount,OUT,$(OUTPUT_BUCKET) standard OUTPUT_DIR)
 
