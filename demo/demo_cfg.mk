@@ -9,7 +9,8 @@ PROJECT_NAME=demo-$(GCP_PROJECT_ID)
 OUTPUT_BUCKET=gs://ms-$(PROJECT_NAME)-output
 
 # docker image
-GCP_IMAGE_NAME=mdocker-base
+# GCP_IMAGE_NAME=mdocker-base
+GCP_GCR_IMAGE_PATH=gcr.io/relman-yaffe/mdocker-base
 
 ##########################################################################################
 # register buckets
