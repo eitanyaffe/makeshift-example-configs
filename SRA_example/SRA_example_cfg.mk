@@ -12,16 +12,14 @@ GCP_LOCATION?=us-west1
 # specify basic parameters
 ##########################################################################################
 
-BUCKET_VER?=v2
-
 # specify project name
 PROJECT_NAME=sra-example-$(GCP_PROJECT_ID)
 
 # specify unique input bucket
-INPUT_BUCKET=gs://ms-$(PROJECT_NAME)-input-$(BUCKET_VER)
+INPUT_BUCKET=gs://ms-$(PROJECT_NAME)-input
 
 # specify unique work bucket
-WORK_BUCKET=gs://ms-$(PROJECT_NAME)-work-$(BUCKET_VER)
+WORK_BUCKET=gs://ms-$(PROJECT_NAME)-work
 
 ##########################################################################################
 ##########################################################################################
@@ -34,8 +32,12 @@ WORK_BUCKET=gs://ms-$(PROJECT_NAME)-work-$(BUCKET_VER)
 ##########################################################################################
 
 # table with samples and their accessions
-# fields: assembly, lib, SRA
-INPUT_SRA_TABLE=$(_cd)/libs.txt
+# fields: ASSEMBLY_ID, LIB_ID, ACCESSION
+INPUT_SRA_TABLE=$(_cd)/libs_short.txt
+#INPUT_SRA_TABLE=$(_cd)/libs_complete.txt
+
+# accession table downloaded for project PRJEB20800 from the SRA run selector
+# only paired runs were used
 
 ##########################################################################################
 # register buckets
@@ -69,3 +71,5 @@ GCP_DU_TOTAL_UNIT=MiB
 
 # default is 1000
 ASSEMBLY_MIN_LEN=200
+
+LIB_ID?=ERAS10_Dag0
