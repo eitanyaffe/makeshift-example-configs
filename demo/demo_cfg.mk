@@ -22,8 +22,6 @@ $(call _class_instance,gmount,OUT,$(OUTPUT_BUCKET) standard OUTPUT_DIR)
 # basic params
 ##########################################################################################
 
-PAR_MS_PROJECT_NAME=$(PROJECT_NAME)
-
 GCP_DSUB_ODIR_BUCKET=$(OUTPUT_BUCKET)
 
 # over parameter table

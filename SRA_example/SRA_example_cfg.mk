@@ -59,8 +59,6 @@ $(call _class_instance,gmount,DE,gs://yaffe-deconseq standard DECONSEQ_BASE_DIR)
 # basic params
 ##########################################################################################
 
-PAR_MS_PROJECT_NAME=$(PROJECT_NAME)
-
 GCP_DSUB_ODIR_BUCKET=$(WORK_BUCKET)
 
 GCP_DU_TOTAL_UNIT=MiB
