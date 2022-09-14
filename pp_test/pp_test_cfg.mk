@@ -29,8 +29,8 @@ INPUT_BUCKET=gs://poly-panner-example
 # table defining libraries and assemblies 
 LIBS_INPUT_TABLE=$(INPUT_DIR)/pp_unit_small/lib_table
 
-# bump up this version to output to new bucket
-OBUCKET_VERSION=4
+# increment the output version to switch to a new output bucket
+OBUCKET_VERSION=1
 
 # by default, the output bucket name combines the research project name and the GCP project
 GCP_DSUB_ODIR_BUCKET=gs://$(PROJECT_NAME)-$(GCP_PROJECT_ID)-work-$(OBUCKET_VERSION)
