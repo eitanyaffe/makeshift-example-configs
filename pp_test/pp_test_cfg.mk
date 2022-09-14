@@ -30,10 +30,13 @@ INPUT_BUCKET=gs://poly-panner-example
 LIBS_INPUT_TABLE=$(INPUT_DIR)/pp_unit_small/lib_table
 
 # bump up this version to output to new bucket
-OBUCKET_VERSION=2
+OBUCKET_VERSION=4
 
 # by default, the output bucket name combines the research project name and the GCP project
 GCP_DSUB_ODIR_BUCKET=gs://$(PROJECT_NAME)-$(GCP_PROJECT_ID)-work-$(OBUCKET_VERSION)
+
+# docker image can be from any docker repository
+GCP_GCR_IMAGE_PATH=eitanyaffe/mdocker-metagenomics:v1.00
 
 ##########################################################################################
 # shared buckets
