@@ -4,6 +4,9 @@
 ##########################################################################################
 ##########################################################################################
 
+# override PAR_USER to lowercase if USER contains uppercase letters 
+PAR_USER=$(USER)
+
 # default dsub regions
 GCP_REGION?=us-west1
 
@@ -26,7 +29,7 @@ PROJECT_NAME=pp-test
 # bucket with input data
 INPUT_BUCKET=gs://poly-panner-example
 
-# table defining libraries and assemblies 
+# table defining libraries and assemblies
 LIBS_INPUT_TABLE=$(INPUT_DIR)/pp_unit_small/lib_table
 
 # increment the output version to switch to a new output bucket
@@ -35,8 +38,8 @@ OBUCKET_VERSION=1
 # by default, the output bucket name combines the research project name and the GCP project
 GCP_DSUB_ODIR_BUCKET=gs://$(PROJECT_NAME)-$(GCP_PROJECT_ID)-work-$(OBUCKET_VERSION)
 
-# docker image can be from any docker repository
-GCP_GCR_IMAGE_PATH=eitanyaffe/mdocker-metagenomics:v1.00
+# optional use docker image from GCR or docker repository
+#GCP_GCR_IMAGE_PATH=eitanyaffe/mdocker-metagenomics:v1.00
 
 ##########################################################################################
 # shared buckets
@@ -84,6 +87,13 @@ ASSEMBLY_ID?=c1_1
 GCP_DU_TOTAL_UNIT=MiB
 
 ##########################################################################################
+# libs module
+##########################################################################################
+
+# use up to this number of reads from each library (in millions)
+LIBS_MAX_MREADS?=25
+
+##########################################################################################
 # cav module
 ##########################################################################################
 
@@ -115,20 +125,16 @@ DYN_POST_IDS=S10
 # optional late samples, long after disturbance ends
 DYN_LATE_IDS=
 
+DYN_CLUSTER_BINS_K_MAX=2
+DYN_CLUSTER_STRAINS_K_MAX=2
+DYN_CLUSTER_VAR_K_MAX=2
+
 ##########################################################################################
 # genomes module
 ##########################################################################################
 
 # disable module since GTDB-tk fails on short bins
 GENOMES_SKIP=T
-
-##########################################################################################
-# dyn module
-##########################################################################################
-
-DYN_CLUSTER_BINS_K_MAX=2
-DYN_CLUSTER_STRAINS_K_MAX=2
-DYN_CLUSTER_VAR_K_MAX=2
 
 ##########################################################################################
 # converge module
@@ -148,4 +154,3 @@ CNV_FEATURE_MIN_ASSEMBLY_COUNT=1
 
 # locate specific features, regardless of variants
 CNV_HIGHLIGHT_FEATURES=
-
