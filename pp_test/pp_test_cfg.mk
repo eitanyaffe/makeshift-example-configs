@@ -4,9 +4,6 @@
 ##########################################################################################
 ##########################################################################################
 
-# override PAR_USER to lowercase if USER contains uppercase letters 
-PAR_USER=$(USER)
-
 # default dsub regions
 GCP_REGION?=us-west1
 
