@@ -8,7 +8,7 @@ PROJECT_NAME=demo-$(GCP_PROJECT_ID)
 # output bucket
 GCP_DSUB_ODIR_BUCKET=gs://ms-$(PROJECT_NAME)-output
 
-# this docker image is made public, can be replaced by any other GCR image
+# this docker image is public on GCR, can be replaced by any other image on GCR
 GCP_GCR_IMAGE_PATH=gcr.io/relman-yaffe/mdocker-metagenomics
 
 ##########################################################################################
