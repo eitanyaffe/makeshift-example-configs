@@ -35,9 +35,8 @@ OBUCKET_VERSION=1
 # by default, the output bucket name combines the research project name and the GCP project
 GCP_DSUB_ODIR_BUCKET=gs://$(PROJECT_NAME)-$(GCP_PROJECT_ID)-work-$(OBUCKET_VERSION)
 
-# by defualt use existing image on GCR (can also use images on dockerhub)
+# this docker image is public on GCR, can be replaced by any other image on GCR
 GCP_GCR_IMAGE_PATH=gcr.io/relman-yaffe/mdocker-metagenomics
-#GCP_GCR_IMAGE_PATH=eitanyaffe/mdocker-metagenomics:v1.00
 
 ##########################################################################################
 # shared buckets
